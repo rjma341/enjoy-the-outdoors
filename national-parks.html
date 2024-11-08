@@ -4,16 +4,84 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>National Parks</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/minty/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styling/bootstrap.min.css" />
+    <link rel="stylesheet" href="styling/customcss.css" />
   </head>
   <body>
-    <main>
-      <h1>National Parks</h1>
-    </main>
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Enjoy the Outdoors</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarColor01"
+          aria-controls="navbarColor01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="national-parks.html"
+                >National Parks</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mountains.html">Mountains</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-4">
+      <h2 class="mb-3">National Parks</h2>
+      <div class="mb-3">
+        <label for="stateFilter" class="form-label">Filter by State:</label>
+        <select id="stateFilter" class="form-select">
+          <option value="">All States</option>
+        </select>
+        <div class="mb-3">
+          <label for="typeFilter" class="form-label"
+            >Filter by Park Type:</label
+          >
+          <select id="typeFilter" class="form-select">
+            <option value="">All Types</option>
+          </select>
+        </div>
+      </div>
+      <table id="parksTable" class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip Code</th>
+            <th>Phone</th>
+            <th style="width: 10rem">Visit</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/main.js"></script>
     <script src="scripts/locationData.js"></script>
     <script src="scripts/parkTypeData.js"></script>
     <script src="scripts/nationalParkData.js"></script>
-
     <script src="scripts/national-parks.js"></script>
   </body>
 </html>

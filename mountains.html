@@ -5,11 +5,90 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mountains</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/minty/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styling/bootstrap.min.css" />
+    <link rel="stylesheet" href="styling/customcss.css" />
   </head>
   <body>
-    <main>
-      <h1>Mountains</h1>
-    </main>
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Enjoy the Outdoors</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarColor01"
+          aria-controls="navbarColor01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html"
+                >Home
+                <span class="visually-hidden">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="national-parks.html">National Parks</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mountains.html">Mountains</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="mt-4 container-fluid center-content d-flex flex-column justify-content-center align-items-center mb-3">
+      <main class="text-center">
+        <h1>Mountains</h1>
+    
+        <!-- mountain select -->
+        <form id="mountainSelect" class="mb-3 d-flex align-items-center">
+          <label class="form-label" for="mountainDrop">Mountains</label>
+          <select class="form-select ms-2" id="mountainDrop" onchange="displayMountain()">
+            <option value="">Select...</option>
+          </select>
+        </form>
+    
+        <!-- mountain card that contains info -->
+        <div class="card mb-3" style="max-width: 600px;">
+          <div class="row g-0 align-items-center">
+            
+            <!-- Images -->
+            <div class="col-md-6">
+              <img id="mountainImage" src="images/Adams-StoryImage_2.jpg" class="img-fluid rounded-start" alt="Mountain image" />
+            </div>
+            
+            <!-- text  -->
+            <div class="col-md-6">
+              <div class="card-body">
+                <h5 id="mountainTitle" class="card-title">Mountain Name</h5>
+                <h6 id="mountainElevation" class="card-text">Elevation</h6>
+                <p id="mountainDescription" class="card-text">Mountain Description</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    
+      
+  
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./scripts/main.js"></script>
     <script src="scripts/mountainData.js"></script>
     <script src="scripts/mountains.js"></script>
   </body>
